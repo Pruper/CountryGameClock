@@ -24,7 +24,7 @@
     <h1 id="date"></h1>
     <h2 id="time"></h2>
     <script type="text/javascript">
-        const startTime = 1663286400000;
+        const startTime = 1663304400000;
 
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -58,7 +58,6 @@
 
         function updateTime() {
             let day = addDays(getCurrentDate());
-            day.year -= 301;
             if (day.year >= 0) {
                 day.year++;
             }
@@ -108,7 +107,7 @@
 
         function addDays(days) {
             var offset1 = 0
-            var d1 = 1, m1 = 1, y1 = 1;
+            var d1 = 1, m1 = 1, y1 = -300;
             var remDays = isLeapYear(y1) ? (366 - offset1) : (365 - offset1);
 
             var y2, offset2 = 0;
